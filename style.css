@@ -57,7 +57,7 @@ body {
     justify-content: center;
     color: bisque;
     overflow: hidden;
-    height: 476px;
+    height: 520px;
 }
 
 .hero-section::after {
@@ -153,7 +153,7 @@ section:hover {
 
 /* Projects */
 #projects {
-    background: linear-gradient(145deg, #d4fc79, #96e6a1);
+    background: linear-gradient(145deg, #4cb8a6, #9ddacc);
 }
 
 .card {
