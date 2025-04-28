@@ -1,0 +1,224 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(270deg, #e0c3fc, #8ec5fc, #e0c3fc);
+    background-size: 600% 600%;
+    animation: backgroundMove 20s ease infinite;
+    color: #333;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background animation */
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.5s;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 50vh;
+    background: linear-gradient(135deg, rgba(255, 120, 95, 0.8), rgba(255, 178, 111, 0.8)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: bisque;
+    overflow: hidden;
+    height: 476px;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(224, 239, 255, 0.4);
+}
+
+.hero-section h1, .hero-section p {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hero-section:hover h1, 
+.hero-section:hover p {
+    transform: translateY(-10px);
+    opacity: 0.9;
+}
+
+.hero-section img {
+    border: 5px solid #fff;
+    box-shadow: 0 8px 20px rgba(255, 254, 254, 0.3);
+    z-index: 2;
+    height: 200px;
+    width: 150px;
+}
+
+/* Sections */
+section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* About */
+#about {
+    background: linear-gradient(145deg, #a1c4fd, #c2e9fb);
+}
+
+/* Education */
+#education {
+    background: linear-gradient(145deg, #fbc2eb, #a6c1ee);
+}
+
+/* Skills */
+#skills {
+    background: linear-gradient(145deg, #fbc2eb, #a6c1ee);
+}
+
+.skill-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+}
+
+/* Technical Languages */
+#languages {
+    background: linear-gradient(145deg, #c2e9fb, #a1c4fd);
+}
+
+#languages span {
+    font-size: 1.2rem;
+    margin: 10px;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+#languages span:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Projects */
+#projects {
+    background: linear-gradient(145deg, #d4fc79, #96e6a1);
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Certificates */
+#certificates {
+    background: linear-gradient(145deg, #f6d365, #fda085);
+}
+
+/* Contact */
+#contact {
+    background: linear-gradient(145deg, #89f7fe, #66a6ff);
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #004aad;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    font-size: 0.95rem;
+    padding: 20px 0;
+    transition: background 0.5s;
+}
+
+footer:hover {
+    background-color: #343a40;
+}
+
+/* Animate Sections on Scroll */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+}
